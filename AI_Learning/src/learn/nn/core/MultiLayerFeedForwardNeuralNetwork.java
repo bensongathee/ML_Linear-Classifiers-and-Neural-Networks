@@ -231,7 +231,7 @@ abstract public class MultiLayerFeedForwardNeuralNetwork extends FeedForwardNeur
 				}
 			}
 		}
-					//Backprop
+					//Backpropagation
 //		 for each node j in the output layer do
 //		     Delta[j] <- g'(in_j) \times (y_j - a_j)
 //		 for l = L-1 to 1 do
