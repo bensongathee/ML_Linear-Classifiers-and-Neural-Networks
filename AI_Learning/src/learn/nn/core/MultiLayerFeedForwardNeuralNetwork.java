@@ -183,7 +183,7 @@ abstract public class MultiLayerFeedForwardNeuralNetwork extends FeedForwardNeur
 		// This must be implemented by you
 		
 //		 for each node j in the output layer do
-//	     Delta[j] <- g'(in_j) \times (y_j - a_j)
+//	     	Delta[j] <- g'(in_j) \times (y_j - a_j)
 		LogisticUnit[] outputUnits = (LogisticUnit[]) this.getOutputUnits();
 		for(int j = 0; j < outputUnits.length; j++) {
 			//in_j
@@ -198,8 +198,8 @@ abstract public class MultiLayerFeedForwardNeuralNetwork extends FeedForwardNeur
 		}
 		
 //		 for l = L-1 to 1 do
-//	     for each node i in layer l do 
-//	         Delta[i] <- g'(in_i) * \sum_j w_ij Delta[j]
+//	     	for each node i in layer l do 
+//	         	Delta[i] <- g'(in_i) * \sum_j w_ij Delta[j]
 		for(int l = (this.layers.length-2); l > 0; l--) {  // not sure -> confirm
 			LogisticUnit[] hiddenLayerUnits = (LogisticUnit[]) this.getLayerUnits(l);
 			for(int i = 0; i < hiddenLayerUnits.length; i++) {
@@ -222,7 +222,7 @@ abstract public class MultiLayerFeedForwardNeuralNetwork extends FeedForwardNeur
 		}
 		
 //		 for each weight w_ij in network do
-//	     w_ij <- w_ij + alpha * a_i * delta_j
+//	     	w_ij <- w_ij + alpha * a_i * delta_j
 		for (int l=1; l < this.layers.length; l++) {
 			LogisticUnit units[] = (LogisticUnit[])this.getLayerUnits(l);
 			for (int index=0; index < units.length; index++) {
