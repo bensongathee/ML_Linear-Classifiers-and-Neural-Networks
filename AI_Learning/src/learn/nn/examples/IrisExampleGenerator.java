@@ -33,7 +33,8 @@ public class IrisExampleGenerator {
 		double sepalWidth = scanner.nextDouble();
 		double petalLength = scanner.nextDouble();
 		double petalWidth = scanner.nextDouble();
-		String label = scanner.next();
+		String label = scanner.nextLine();
+		label = label.substring(1,label.length());
 		double[] inputs = { sepalLength, sepalWidth, petalLength, petalWidth };
 		double[] outputs = { 0.0, 0.0, 0.0 };
 		if (label.equals("Iris-setosa")) {
